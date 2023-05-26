@@ -1,0 +1,13 @@
+name: Maven Compile & UT
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  run-build-and-deploy:
+    uses: octopusden/octopus-base/.github/workflows/common-java-maven-build.yml@main
+    with:
+      java-version: "8"
+    secrets: inherit
